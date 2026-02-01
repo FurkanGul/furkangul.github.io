@@ -5,94 +5,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Car Parking 3D Multiplayer</title>
   <style>
-    /* Body ve arkaplan ayarları */
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
       height: 100vh;
-      background-image: url('background.jpg'); /* 4096x2048 resmi repo'ya ekle */
-      background-size: cover;       /* ekranı doldur */
-      background-position: center;  /* ortada kalır */
+      background-image: url('background.jpg'); /* 4096x2048 resim repo’ya ekle */
+      background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
-      position: relative;
-      overflow-x: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    /* Saydam kutular */
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      padding: 1em 2em;
-      border-radius: 12px;
+    /* Ortadaki kutu */
+    .center-box {
+      width: 80%;
+      max-width: 800px;
+      height: 33%; /* görsel yüksekliğinin yaklaşık 1/3’ü */
+      background-color: rgba(0,0,0,0.5); /* saydam kutu */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
       text-align: center;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      padding: 1em;
     }
 
-    /* Car Parking 3D Multiplayer */
     .game-title {
-      top: 700px; /* üstten 700px */
-      font-size: 3rem;
-      font-weight: bold;
-    }
-
-    /* Download link */
-    .download {
-      top: 1370px; /* üstten 1370px */
-      font-size: 1.5rem;
+      color: #3787ff; /* mavi */
+      font-weight: 800; /* kalın */
+      font-size: 2.5rem;
+      margin: 0.2em 0;
     }
 
     .download a {
-      color: #00bfff;
-      text-decoration: none;
+      color: #00ff00; /* yeşil */
       font-weight: bold;
+      font-size: 1.5rem;
+      text-decoration: none;
     }
 
     .download a:hover {
       text-decoration: underline;
     }
 
-    /* Support link - en altta */
-    .support {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 1rem;
-    }
-
-    .support a {
-      color: white;
-      text-decoration: underline;
-    }
-
-    /* Mobil uyumlu */
+    /* Responsive mobil */
     @media (max-width: 600px) {
-      .game-title { font-size: 2rem; top: 30%; }
-      .download { font-size: 1.2rem; top: 40%; }
-      .overlay { padding: 0.8em 1.5em; }
-      .support { font-size: 0.9rem; bottom: 10px; }
+      .center-box { height: 35%; padding: 0.8em; }
+      .game-title { font-size: 1.8rem; }
+      .download a { font-size: 1.2rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Oyun başlığı -->
-  <div class="overlay game-title">
-    Car Parking 3D Multiplayer
-  </div>
-
-  <!-- Download linki -->
-  <div class="overlay download">
-    <a href="https://apps.apple.com/tr/app/car-parking-3d-multiplayer/id1563328274" target="_blank">
-      Download from App Store
-    </a>
-  </div>
-
-  <!-- Support linki -->
-  <div class="support">
-    <a href="mailto:your-email@example.com">Support</a>
+  <div class="center-box">
+    <div class="game-title">Car Parking 3D Multiplayer</div>
+    <div class="download">
+      <a href="https://apps.apple.com/tr/app/car-parking-3d-multiplayer/id1563328274" target="_blank">
+        Download
+      </a>
+    </div>
   </div>
 
 </body>
