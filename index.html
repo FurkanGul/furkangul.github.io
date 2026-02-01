@@ -3,103 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Furkan Gül</title>
+  <title>Car Parking 3D Multiplayer</title>
   <style>
-
+    /* Body ve arkaplan ayarları */
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       height: 100vh;
-      text-align: center;
-
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-position: center;
+      background-image: url('background.jpg'); /* 4096x2048 resmi repo'ya ekle */
+      background-size: cover;       /* ekranı doldur */
+      background-position: center;  /* ortada kalır */
       background-repeat: no-repeat;
+      position: relative;
+      overflow-x: hidden;
     }
 
+    /* Saydam kutular */
     .overlay {
-      background-color: rgba(0, 0, 0, 0.5); /* siyah yarı saydam */
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
       padding: 1em 2em;
       border-radius: 12px;
-      margin: 0.5em 0;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
-    h1 {
+    /* Car Parking 3D Multiplayer */
+    .game-title {
+      top: 700px; /* üstten 700px */
       font-size: 3rem;
-      margin: 0.2em 0;
+      font-weight: bold;
     }
 
-    h2 {
-      font-size: 2rem;
-      margin: 0.2em 0;
-      font-weight: normal;
-    }
-
-    .game {
-      margin: 1em 0;
+    /* Download link */
+    .download {
+      top: 1370px; /* üstten 1370px */
       font-size: 1.5rem;
     }
 
-    .game a {
-      color: #ffd700;
+    .download a {
+      color: #00bfff;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .game a:hover {
+    .download a:hover {
       text-decoration: underline;
     }
 
-    .social {
-      margin-top: 2em;
-      font-size: 1.2rem;
+    /* Support link - en altta */
+    .support {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1rem;
     }
 
-    .social a {
+    .support a {
       color: white;
-      text-decoration: none;
-      margin: 0 0.5em;
-    }
-
-    .social a:hover {
       text-decoration: underline;
     }
 
+    /* Mobil uyumlu */
     @media (max-width: 600px) {
-      h1 { font-size: 2.2rem; }
-      h2 { font-size: 1.5rem; }
-      .game { font-size: 1.2rem; }
+      .game-title { font-size: 2rem; top: 30%; }
+      .download { font-size: 1.2rem; top: 40%; }
       .overlay { padding: 0.8em 1.5em; }
-      .social { font-size: 1rem; }
+      .support { font-size: 0.9rem; bottom: 10px; }
     }
   </style>
 </head>
 <body>
 
-  <div class="overlay">
-    <h1>Furkan Gül</h1>
+  <!-- Oyun başlığı -->
+  <div class="overlay game-title">
+    Car Parking 3D Multiplayer
   </div>
 
-  <div class="overlay">
-    <h2>Games</h2>
-  </div>
-
-  <div class="overlay game">
+  <!-- Download linki -->
+  <div class="overlay download">
     <a href="https://apps.apple.com/tr/app/car-parking-3d-multiplayer/id1563328274" target="_blank">
-      Car Parking 3D Multiplayer → Download
+      Download from App Store
     </a>
   </div>
 
-  <div class="overlay social">
-    <a href="https://instagram.com/fggamecompany" target="_blank">
-      Instagram: @fggamecompany
-    </a>
+  <!-- Support linki -->
+  <div class="support">
+    <a href="mailto:your-email@example.com">Support</a>
   </div>
 
 </body>
