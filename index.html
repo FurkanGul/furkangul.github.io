@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Furkan Gül</title>
   <style>
-    /* Genel stil */
+
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(to bottom, #4a90e2, #357ABD);
       color: white;
       display: flex;
       flex-direction: column;
@@ -17,6 +16,18 @@
       align-items: center;
       height: 100vh;
       text-align: center;
+
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5); /* siyah yarı saydam */
+      padding: 1em 2em;
+      border-radius: 12px;
+      margin: 0.5em 0;
     }
 
     h1 {
@@ -60,27 +71,32 @@
       text-decoration: underline;
     }
 
-    /* Mobil uyumlu */
     @media (max-width: 600px) {
       h1 { font-size: 2.2rem; }
       h2 { font-size: 1.5rem; }
       .game { font-size: 1.2rem; }
+      .overlay { padding: 0.8em 1.5em; }
       .social { font-size: 1rem; }
     }
   </style>
 </head>
 <body>
 
-  <h1>Furkan Gül</h1>
-  <h2>Games</h2>
+  <div class="overlay">
+    <h1>Furkan Gül</h1>
+  </div>
 
-  <div class="game">
+  <div class="overlay">
+    <h2>Games</h2>
+  </div>
+
+  <div class="overlay game">
     <a href="https://apps.apple.com/tr/app/car-parking-3d-multiplayer/id1563328274" target="_blank">
       Car Parking 3D Multiplayer → Download
     </a>
   </div>
 
-  <div class="social">
+  <div class="overlay social">
     <a href="https://instagram.com/fggamecompany" target="_blank">
       Instagram: @fggamecompany
     </a>
