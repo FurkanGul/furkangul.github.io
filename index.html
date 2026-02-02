@@ -1,74 +1,142 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Car Parking 3D Multiplayer</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      height: 100vh;
-      background-image: url('background.jpg'); /* 4096x2048 resim repo’ya ekle */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FG GAMES - Car Parking 3D Multiplayer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
 
-    /* Ortadaki kutu */
-    .center-box {
-      width: 80%;
-      max-width: 800px;
-      height: 33%; /* görsel yüksekliğinin yaklaşık 1/3’ü */
-      background-color: rgba(0,0,0,0.5); /* saydam kutu */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border-radius: 15px;
-      text-align: center;
-      padding: 1em;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    .game-title {
-      color: #3787ff; /* mavi */
-      font-weight: 800; /* kalın */
-      font-size: 2.5rem;
-      margin: 0.2em 0;
-    }
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0a0a;
+            color: #fff;
+        }
 
-    .download a {
-      color: #00ff00; /* yeşil */
-      font-weight: bold;
-      font-size: 1.5rem;
-      text-decoration: none;
-    }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    .download a:hover {
-      text-decoration: underline;
-    }
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(30, 144, 255, 0.0666); 
+            padding: 8px 20px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            z-index: 10;
+            backdrop-filter: blur(5px);
+        }
 
-    /* Responsive mobil */
-    @media (max-width: 600px) {
-      .center-box { height: 35%; padding: 0.8em; }
-      .game-title { font-size: 1.8rem; }
-      .download a { font-size: 1.2rem; }
-    }
-  </style>
+        .hero {
+            text-align: center;
+            padding: 99px 20px 60px 20px;
+            background: linear-gradient(180deg, rgba(30,144,255,0.666), rgba(10,10,10,0.9)), url('hero-background.jpg') no-repeat center center/cover;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            font-weight: bold;
+            color: #f0f0f0;
+            margin: 0 0 20px 0;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            color: #f0f0f0;
+            padding: 0 40px 30px 40px; 
+        }
+
+        .hero .play-button {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            background-color: #1E90FF;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .hero .play-button:hover {
+            background-color: #0d5caa;
+        }
+
+        .screenshots {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .screenshots img {
+            width: 100%;
+            max-width: 1920px;
+            height: auto;
+            display: block;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .screenshots img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+        }
+
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 20px;
+            font-size: 1em;
+        }
+
+        footer a {
+            color: #1E90FF;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1.2em;
+            }
+            .hero .play-button {
+                padding: 12px 30px;
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="center-box">
-    <div class="game-title">Car Parking 3D Multiplayer</div>
-    <div class="download">
-      <a href="https://apps.apple.com/tr/app/car-parking-3d-multiplayer/id1563328274" target="_blank">
-        Download
-      </a>
-    </div>
-  </div>
+    <header>
+        FG GAMES
+    </header>
+
+    <section class="hero">
+        <h2>Car Parking 3D Multiplayer</h2>
+        <p>Play online with your friends in exciting multiplayer mode! Complete challenging parking missions, customize and upgrade a wide range of cars, and show off your driving skills. Enjoy endless fun with unique car modifications!</p>
+        <a href="#" class="play-button">Play Now</a>
+    </section>
+
+    <section class="screenshots">
+        <img src="screenshot1.jpg" alt="Car Parking 3D Multiplayer Screenshot 1">
+        <img src="screenshot2.jpg" alt="Car Parking 3D Multiplayer Screenshot 2">
+        <img src="screenshot3.jpg" alt="Car Parking 3D Multiplayer Screenshot 3">
+    </section>
+
+    <footer>
+        <p>İletişim ve destek için <a href="mailto:support@example.com">buraya tıkla</a></p>
+    </footer>
 
 </body>
 </html>
