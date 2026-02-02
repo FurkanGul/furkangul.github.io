@@ -24,7 +24,6 @@
             text-decoration: none;
         }
 
-        /* ===== HEADER ===== */
         header {
             position: fixed;
             top: 0;
@@ -39,7 +38,6 @@
             backdrop-filter: blur(6px);
         }
 
-        /* ===== HERO ===== */
         .hero {
             text-align: center;
             padding: 60px 20px 30px;
@@ -59,17 +57,17 @@
         .hero p {
             font-size: 1.1em;
             color: #f0f0f0;
-            padding: 0 15px 15px;
+            padding: 0 15px 5px;
         }
 
         .play-button {
             display: inline-block;
-            padding: 15px 40px;
-            font-size: 1.2em;
+            padding: 10px 20px;
+            font-size: 1.0666em;
             font-weight: bold;
             color: #ffffff;
             background-color: #5bc4fa;
-            border-radius: 50px;
+            border-radius: 16px;
             transition: background-color 0.3s, transform 0.3s;
         }
 
@@ -78,7 +76,6 @@
             transform: translateY(-2px);
         }
 
-        /* ===== SCREENSHOTS ===== */
         .screenshots {
             display: flex;
             flex-direction: column;
@@ -91,18 +88,16 @@
             height: auto;
             display: block;
         }
-
-        /* ===== FOOTER ===== */
+        
         footer {
             background-color: #111;
             text-align: center;
-            padding: 24px 20px;
+            padding: 16px 20px;
             font-size: 1em;
-            margin-top: 40px;
         }
 
         footer a {
-            color: #5bc4fa;
+            color: #f0f0f0;
             font-weight: bold;
             transition: opacity 0.3s;
         }
@@ -110,21 +105,7 @@
         footer a:hover {
             opacity: 0.8;
         }
-
-        /* ===== MOBILE ===== */
-        @media (max-width: 768px) {
-            .play-button {
-                padding: 12px 28px;
-                font-size: 1em;
-            }
-        }
-
-        /* Disable hover effects on touch devices */
-        @media (hover: none) {
-            .play-button:hover {
-                transform: none;
-            }
-        }
+        
     </style>
 </head>
 
