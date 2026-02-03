@@ -48,36 +48,38 @@
         }
 
         .hero {
-            text-align: center;
             padding: 80px 15px 30px; /* header boşluğu */
             background: linear-gradient(
                 180deg,
                 rgba(77, 125, 212, 0.666),
                 rgba(10, 10, 10, 0.999)
             );
+            text-align: center; /* tüm içerik ortalanacak */
         }
 
+        /* Başlık ve ikon ortalanacak, tek satır */
         .hero h2 {
             font-size: 1.666em;
             font-weight: 700;
             margin: 0 0 16px;
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
             gap: 10px;
+            white-space: nowrap; /* tek satır */
         }
 
         .game-icon {
             width: 40px;
             height: 40px;
             vertical-align: middle;
-            border-radius: 12px; /* kenarları yuvarlatıldı */
+            border-radius: 12px; /* kenarları yuvarlak */
         }
 
         .hero p {
             font-size: 1.0em;
             color: #f0f0f0;
             padding: 0 15px 5px;
+            text-align: center;
         }
 
         .play-section {
@@ -123,7 +125,6 @@
             opacity: 0.85;
         }
 
-        /* Instagram butonu */
         .instagram-button {
             background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
         }
@@ -132,7 +133,6 @@
             filter: brightness(1.1);
         }
 
-        /* TikTok butonu */
         .tiktok-button {
             background-color: #010101;
         }
@@ -170,6 +170,17 @@
         footer a:hover {
             opacity: 0.8;
         }
+
+        @media (max-width: 600px) {
+            .hero h2 {
+                font-size: 1.4em;
+            }
+
+            .game-icon {
+                width: 32px;
+                height: 32px;
+            }
+        }
     </style>
 </head>
 
@@ -191,7 +202,6 @@
         </p>
 
         <div class="play-section">
-            <!-- Instagram ve TikTok ikonlu yazısız butonlar -->
             <a href="https://instagram.com/yourprofile" class="social-button instagram-button" target="_blank">
                 <i class="bi bi-instagram"></i>
             </a>
@@ -199,7 +209,6 @@
                 <i class="bi bi-tiktok"></i>
             </a>
 
-            <!-- Play Now butonu -->
             <a href="#" class="play-button">
                 <i class="bi bi-play-fill"></i> Play Now
             </a>
